@@ -22,7 +22,7 @@ const Index = () => {
                 className="text-3xl font-bold"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
-                Пушкинский бал
+                Пушкинский Бал 2025
               </h1>
             </div>
             <nav className="hidden md:flex space-x-6">
@@ -36,13 +36,13 @@ const Index = () => {
                 href="#gallery"
                 className="hover:text-amber-200 transition-colors"
               >
-                Галерея
+                Костюмы
               </a>
               <a
-                href="#dances"
+                href="#program"
                 className="hover:text-amber-200 transition-colors"
               >
-                Танцы
+                Программа
               </a>
               <a
                 href="#location"
@@ -66,17 +66,18 @@ const Index = () => {
         <div className="relative container mx-auto px-4 text-center text-white">
           <Badge className="mb-4 bg-amber-600 text-white px-4 py-2">
             <Icon name="Calendar" size={16} className="mr-2" />
-            15 декабря 2024
+            2025 год
           </Badge>
           <h2
             className="text-6xl font-bold mb-6"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            Пушкинский бал
+            Пушкинский Бал 2025
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Окунитесь в атмосферу XIX века. Бальные танцы, исторические костюмы,
-            изысканная музыка и незабываемые впечатления
+            Грандиозное культурное событие, воссоздающее атмосферу светских
+            балов XIX века. Элегантность пушкинской эпохи встретится с
+            современным размахом в историческом комплексе Гостиного Двора.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -109,13 +110,30 @@ const Index = () => {
               О событии
             </h3>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Пушкинский бал — это уникальное культурное событие, где история
-              оживает. Погрузитесь в эпоху великого поэта, насладитесь
-              атмосферой русской аристократии и почувствуйте себя героем
-              произведений Александра Сергеевича Пушкина.
+              Пушкинский Бал 2025 — место, где оживают страницы классики.
+              Театрализованные постановки, живая музыка, бальные танцы и
+              атмосфера настоящего XIX века. Присоединяйтесь к танцу времени!
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon
+                  name="Theater"
+                  size={48}
+                  className="mx-auto text-amber-600 mb-4"
+                />
+                <CardTitle className="text-amber-900">
+                  Театрализованные постановки
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Спектакли по мотивам «Евгения Онегина» и встреча с «Натальей
+                  Гончаровой»
+                </CardDescription>
+              </CardContent>
+            </Card>
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Icon
@@ -123,45 +141,30 @@ const Index = () => {
                   size={48}
                   className="mx-auto text-amber-600 mb-4"
                 />
-                <CardTitle className="text-amber-900">Живая музыка</CardTitle>
+                <CardTitle className="text-amber-900">
+                  Камерный оркестр
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Оркестр исполнит произведения композиторов XIX века
+                  Живая музыка эпохи Пушкина и романсы на его произведения
                 </CardDescription>
               </CardContent>
             </Card>
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Icon
-                  name="Sparkles"
+                  name="Award"
                   size={48}
                   className="mx-auto text-amber-600 mb-4"
                 />
                 <CardTitle className="text-amber-900">
-                  Исторические костюмы
+                  Конкурс костюмов
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Аутентичные наряды эпохи Пушкина и возможность аренды
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Icon
-                  name="Users"
-                  size={48}
-                  className="mx-auto text-amber-600 mb-4"
-                />
-                <CardTitle className="text-amber-900">
-                  Светское общество
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Встреча с единомышленниками и любителями истории
+                  Соревнование на лучший костюм эпохи с призами от партнеров
                 </CardDescription>
               </CardContent>
             </Card>
@@ -212,15 +215,18 @@ const Index = () => {
               </CardHeader>
             </Card>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="aspect-square bg-amber-200 flex items-center justify-center">
-                <Icon name="Camera" size={64} className="text-amber-600" />
-              </div>
+              <div
+                className="aspect-square bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url(https://cdn.poehali.dev/files/74bcc60b-cf82-4264-aaaf-c90fa7070564.jpg)",
+                }}
+              ></div>
               <CardHeader>
-                <CardTitle className="text-amber-900">
-                  Исторические фото
-                </CardTitle>
+                <CardTitle className="text-amber-900">Дресс-код</CardTitle>
                 <CardDescription>
-                  Редкие снимки балов и светских мероприятий прошлого
+                  Обязательный дресс-код: дамы в платьях ампир, кавалеры во
+                  фраках
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -228,16 +234,53 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Dances Section */}
-      <section id="dances" className="py-16 bg-white">
+      {/* Program Section */}
+      <section id="program" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h3
             className="text-4xl font-bold text-center mb-12 text-amber-900"
             style={{ fontFamily: "Playfair Display, serif" }}
           >
-            Танцы и мастер-классы
+            Программа бала
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-amber-900 flex items-center">
+                  <Icon
+                    name="Crown"
+                    size={24}
+                    className="mr-2 text-amber-600"
+                  />
+                  Торжественное открытие
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <Icon
+                      name="User"
+                      size={16}
+                      className="mr-2 text-amber-600 mt-1"
+                    />
+                    <span>
+                      Приветствие от «хозяйки бала» в образе Натальи Гончаровой
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <Icon
+                      name="Drama"
+                      size={16}
+                      className="mr-2 text-amber-600 mt-1"
+                    />
+                    <span>
+                      Театрализованная постановка по мотивам «Евгения Онегина»
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle className="text-amber-900 flex items-center">
@@ -251,95 +294,143 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
-                  <li className="flex items-center">
+                  <li className="flex items-start">
                     <Icon
-                      name="Check"
+                      name="GraduationCap"
                       size={16}
-                      className="mr-2 text-amber-600"
+                      className="mr-2 text-amber-600 mt-1"
                     />
-                    Вальс — король бальных танцев
+                    <span>Мастер-классы по вальсу, мазурке и полонезу</span>
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-start">
                     <Icon
-                      name="Check"
+                      name="Music"
                       size={16}
-                      className="mr-2 text-amber-600"
+                      className="mr-2 text-amber-600 mt-1"
                     />
-                    Полонез — торжественный танец
-                  </li>
-                  <li className="flex items-center">
-                    <Icon
-                      name="Check"
-                      size={16}
-                      className="mr-2 text-amber-600"
-                    />
-                    Мазурка — польский народный танец
-                  </li>
-                  <li className="flex items-center">
-                    <Icon
-                      name="Check"
-                      size={16}
-                      className="mr-2 text-amber-600"
-                    />
-                    Кадриль — французский квадратный танец
+                    <span>
+                      Открытый бал под живую музыку камерного оркестра
+                    </span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle className="text-amber-900 flex items-center">
                   <Icon
-                    name="GraduationCap"
+                    name="BookOpen"
                     size={24}
                     className="mr-2 text-amber-600"
                   />
-                  Мастер-классы
+                  Литературные салоны
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
-                  <li className="flex items-center">
+                  <li className="flex items-start">
                     <Icon
-                      name="Clock"
+                      name="Feather"
                       size={16}
-                      className="mr-2 text-amber-600"
+                      className="mr-2 text-amber-600 mt-1"
                     />
-                    <span>
-                      <strong>18:00</strong> — Основы бального этикета
-                    </span>
+                    <span>Поэтические чтения стихов Пушкина</span>
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-start">
                     <Icon
-                      name="Clock"
+                      name="Award"
                       size={16}
-                      className="mr-2 text-amber-600"
+                      className="mr-2 text-amber-600 mt-1"
                     />
-                    <span>
-                      <strong>18:30</strong> — Вальс для начинающих
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <Icon
-                      name="Clock"
-                      size={16}
-                      className="mr-2 text-amber-600"
-                    />
-                    <span>
-                      <strong>19:00</strong> — Полонез и мазурка
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <Icon
-                      name="Clock"
-                      size={16}
-                      className="mr-2 text-amber-600"
-                    />
-                    <span>
-                      <strong>19:30</strong> — Свободные танцы
-                    </span>
+                    <span>Конкурс на лучший костюм эпохи</span>
                   </li>
                 </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Activities */}
+      <section className="py-16 bg-amber-50">
+        <div className="container mx-auto px-4">
+          <h3
+            className="text-4xl font-bold text-center mb-12 text-amber-900"
+            style={{ fontFamily: "Playfair Display, serif" }}
+          >
+            Интерактивные зоны
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon
+                  name="Camera"
+                  size={32}
+                  className="mx-auto text-amber-600 mb-2"
+                />
+                <CardTitle className="text-amber-900 text-lg">
+                  Фотоателье XIX века
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Профессиональная фотосессия в исторических интерьерах
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon
+                  name="Pen"
+                  size={32}
+                  className="mx-auto text-amber-600 mb-2"
+                />
+                <CardTitle className="text-amber-900 text-lg">
+                  Каллиграфия
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Мастер-класс по письму пером в стиле XIX века
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon
+                  name="Flower"
+                  size={32}
+                  className="mx-auto text-amber-600 mb-2"
+                />
+                <CardTitle className="text-amber-900 text-lg">
+                  Создание вееров
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Изготовление дамских аксессуаров своими руками
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Icon
+                  name="Star"
+                  size={32}
+                  className="mx-auto text-amber-600 mb-2"
+                />
+                <CardTitle className="text-amber-900 text-lg">
+                  Детский квест
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  «Тайна пера Пушкина» с аниматорами и призами
+                </CardDescription>
               </CardContent>
             </Card>
           </div>
@@ -364,14 +455,13 @@ const Index = () => {
                     size={24}
                     className="mr-2 text-amber-600"
                   />
-                  Усадьба "Архангельское"
+                  Гостиный Двор
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-4">
-                  Историческая усадьба XVIII века с роскошными интерьерами и
-                  парком. Идеальное место для проведения бала в стиле пушкинской
-                  эпохи.
+                  Исторический комплекс в самом сердце Москвы. Роскошные залы и
+                  уникальная атмосфера для незабываемого бала.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center">
@@ -380,7 +470,15 @@ const Index = () => {
                       size={16}
                       className="mr-2 text-amber-600"
                     />
-                    <span>Московская область, Красногорский район</span>
+                    <span>Москва, ул. Ильинка, 4</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Icon
+                      name="Train"
+                      size={16}
+                      className="mr-2 text-amber-600"
+                    />
+                    <span>м. «Площадь Революции», «Китай-город»</span>
                   </div>
                   <div className="flex items-center">
                     <Icon
@@ -388,15 +486,7 @@ const Index = () => {
                       size={16}
                       className="mr-2 text-amber-600"
                     />
-                    <span>Бесплатная парковка на 200 мест</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Icon
-                      name="Bus"
-                      size={16}
-                      className="mr-2 text-amber-600"
-                    />
-                    <span>Автобус от м. Тушинская</span>
+                    <span>Рекомендуем такси — парковки на Красной площади</span>
                   </div>
                 </div>
               </CardContent>
@@ -415,7 +505,7 @@ const Index = () => {
                     />
                     <p className="text-amber-800">Интерактивная карта</p>
                     <p className="text-sm text-amber-700">
-                      Усадьба "Архангельское"
+                      Гостиный Двор, ул. Ильинка, 4
                     </p>
                   </div>
                 </div>
@@ -443,7 +533,7 @@ const Index = () => {
                 className="text-xl font-bold mb-4"
                 style={{ fontFamily: "Playfair Display, serif" }}
               >
-                Пушкинский бал
+                Пушкинский Бал 2025
               </h4>
               <p className="text-amber-200">
                 Культурное событие для ценителей истории и прекрасного
@@ -488,7 +578,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-amber-800 mt-8 pt-8 text-center text-amber-200">
-            <p>&copy; 2024 Пушкинский бал. Все права защищены.</p>
+            <p>&copy; 2025 Пушкинский Бал. Все права защищены.</p>
           </div>
         </div>
       </footer>
